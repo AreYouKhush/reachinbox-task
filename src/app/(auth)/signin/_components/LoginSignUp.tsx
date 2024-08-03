@@ -2,8 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { signIn } from "next-auth/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export const LoginSignUp = () => {
   return (
@@ -11,13 +11,11 @@ export const LoginSignUp = () => {
       <div className="flex flex-col justify-center items-center text-white bg-[#121212] m-3 gap-11 rounded-md border-[1px] border-gray-800 p-5 pb-7 sm:w-[450px] w-[300px]">
         <div className="w-full flex items-center justify-center flex-col gap-5">
           <div>Create a new account</div>
-          <div className="w-full flex justify-center">
-            <Button
-              className="flex gap-2 w-10/12 border-[1px] border-gray-600"
-              onClick={() => {
-                signIn("google");
-              }}
-            >
+          <Link
+            href="https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:3000/signin"
+            className="w-full flex justify-center"
+          >
+            <Button className="flex gap-2 w-10/12 border-[1px] border-gray-600">
               <div className="relative w-[25px] h-[25px] flex">
                 <Image
                   src="/google.png"
@@ -28,7 +26,7 @@ export const LoginSignUp = () => {
               </div>
               Sign Up with Google
             </Button>
-          </div>
+          </Link>
         </div>
 
         <div className="flex items-center justify-center flex-col gap-3">

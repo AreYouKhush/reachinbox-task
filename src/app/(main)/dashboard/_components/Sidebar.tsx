@@ -11,11 +11,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { useSession } from "next-auth/react";
 
 export const Sidebar = () => {
-  const { data: session } = useSession();
-
   return (
     <>
       <div className="fixed h-dvh dark:bg-[#101113] bg-gray-300 z-10 w-14 flex flex-col items-center pt-3 justify-between">
@@ -47,13 +44,7 @@ export const Sidebar = () => {
         </div>
         <div className="pb-3">
           <Avatar>
-            <AvatarImage
-              src={
-                session?.user?.image
-                  ? session?.user?.image
-                  : "https://github.com/shadcn.png"
-              }
-            />
+            <AvatarImage src={"https://github.com/shadcn.png"} />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </div>
