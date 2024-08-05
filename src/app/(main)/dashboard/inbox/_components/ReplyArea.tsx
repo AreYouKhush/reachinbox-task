@@ -29,16 +29,11 @@ const ReplyArea = ({ email, setToggleReply }: ReplyAreaProps) => {
 
   const handleReply = async () => {
     const mail = {
-      toName: email?.toName,
       to: email?.toEmail,
       from: email?.fromEmail,
-      fromName: email?.fromName,
       subject: subject,
       body: desc,
-      references: [email?.references],
-      isReplyTo: null,
     };
-    console.log(JSON.stringify(mail));
     const response = await axios.post(
       `https://hiring.reachinbox.xyz/api/v1/onebox/reply/${email?.threadId}`,
       mail,

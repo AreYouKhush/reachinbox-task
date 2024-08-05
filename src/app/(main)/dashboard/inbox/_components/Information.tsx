@@ -30,13 +30,13 @@ const Information = ({ email }: InformationProps) => {
           </div>
         </div>
         <div className="flex justify-between text-sm">
-          <div className="text-zinc-600 dark:text-white">LinekedI</div>
+          <div className="text-zinc-600 dark:text-white">LinkedIn</div>
           <div className="text-zinc-900 dark:text-zinc-300">
             linkedin.com/in/{email?.fromName.split(" ")[0].toLowerCase()}
           </div>
         </div>
         <div className="flex justify-between text-sm">
-          <div className="text-zinc-600 dark:text-white">Compant</div>
+          <div className="text-zinc-600 dark:text-white">Company</div>
           <div className="text-zinc-900 dark:text-zinc-300">Reachinbox</div>
         </div>
       </div>
