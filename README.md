@@ -1,3 +1,61 @@
+
+# Reachinbox Assignment
+
+## Tasks
+The assignment is to use the designs and APIs provided and create a functional web app as per the following
+instructions -
+1. Implement the login page - Use the design provided ✅
+2. Once logged in the user should be taken to the onebox screen. /google-login ✅
+3. Implement fetching of data in onebox using api integration ✅
+```
+/onebox/list
+GET /onebox/:thread_id
+DELETE /onebox/:thread_id
+```
+4. Implement keyboard shortcuts in onebox - “D” should delete. “R” should open Reply box ✅
+5. Implement custom text editor (Need to Add Custom button in editor like “SAVE” and “Variables”) 
+6. Implement Reply - Clicking on send should send Reply
+```
+POST /reply/:thread_id
+```
+7. Implement both - light and dark mode ✅
+
+
+
+## Deployment
+
+Project deployed on:
+
+```bash
+  https://reachinbox-task.vercel.app/signin
+```
+
+## Tech Stack
+
+**Client:** TypeScript, Next, React, Redux, TailwindCSS, shadcn, axios, 
+
+
+## Screenshots
+
+### /signin
+![Screenshot 2024-08-05 163117](https://github.com/user-attachments/assets/780d590d-abb4-475f-806d-291780ef38df)
+
+### /dashboard
+![Screenshot 2024-08-05 163130](https://github.com/user-attachments/assets/943fd7d7-3fc3-466e-ab9e-a3c0674837c8)
+
+### /dashboard/inbox/:thread_id
+![Screenshot 2024-08-05 163143](https://github.com/user-attachments/assets/b613a33a-52f5-4834-a124-62d3948cad0c)
+
+### Ligh Mode
+![Screenshot 2024-08-05 163629](https://github.com/user-attachments/assets/f0edf14f-6f3c-4d32-8b45-09eb916d3ec4)
+
+### Reply box ('r' key)
+![Screenshot 2024-08-05 163153](https://github.com/user-attachments/assets/9d735f10-9f98-4902-aac3-47ce3fe24df8)
+
+### Delete modal ('d' key)
+![Screenshot 2024-08-05 163214](https://github.com/user-attachments/assets/45127730-6237-41d7-bb9f-a88ed846b054)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
