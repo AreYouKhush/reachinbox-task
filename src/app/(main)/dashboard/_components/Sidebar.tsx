@@ -35,7 +35,7 @@ export const Sidebar = ({
 }: ActiveProps) => {
   return (
     <>
-      <div className="fixed h-dvh dark:bg-[#101113] bg-gray-200 z-10 w-14 flex flex-col items-center pt-3 justify-between border-r-[1px] border-gray-300">
+      <div className="fixed h-dvh dark:bg-[#101113] bg-gray-200 z-10 w-14 flex flex-col items-center pt-3 justify-between border-r-[1px] border-gray-300 dark:border-gray-600">
         <div className="relative w-[30px] h-[30px] flex">
           <Image src="/logo.png" fill className="object-contain" alt="logo" />
         </div>

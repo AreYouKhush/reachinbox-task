@@ -12,7 +12,7 @@ export const LoginSignUp = () => {
         <div className="w-full flex items-center justify-center flex-col gap-5">
           <div>Create a new account</div>
           <Link
-            href="https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:3000/signin"
+            href="https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://reachinbox-task.vercel.app/signin"
             className="w-full flex justify-center"
           >
             <Button className="flex gap-2 w-10/12 border-[1px] border-gray-600">
