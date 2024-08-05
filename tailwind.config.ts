@@ -52,6 +52,13 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        interested: "#84E662",
+        meetingBooked: "#9C62E6",
+        meetingCompleted: "#E6D162",
+        closed: "#626FE6",
+        outOfOffice: "#62B6E6",
+        wrongPerson: "#627FE6",
+        notInterested: "#E662A1",
       },
       borderRadius: {
         lg: "var(--radius)",

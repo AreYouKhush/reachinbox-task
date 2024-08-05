@@ -16,7 +16,7 @@ export const ModeToggle = () => {
   return (
     <>
       <div>
-        <Switch ref={switchRef} id="jijifds" onClick={handleClick} />
+        <Switch ref={switchRef} onClick={handleClick} />
       </div>
     </>
   );
