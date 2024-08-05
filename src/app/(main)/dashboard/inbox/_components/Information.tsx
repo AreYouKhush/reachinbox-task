@@ -3,7 +3,7 @@ import React from "react";
 import { Mail, Send } from "lucide-react";
 
 interface InformationProps {
-  email: IEmail;
+  email?: IEmail;
 }
 
 const Information = ({ email }: InformationProps) => {

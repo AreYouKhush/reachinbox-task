@@ -35,7 +35,7 @@ export const EmailSidebar = ({ data }: IData) => {
         </div>
         <div className="flex gap-2 h-[20px] px-2">
           <Badge className="flex items-center  justify-center gap-1 dark:text-white text-black dark:bg-zinc-600 font-light bg-gray-200">
-            <Dot variant="closed" />
+            <Dot variant="interested" />
             <div className="text-black dark:text-white text-[10px]">
               Interested
             </div>

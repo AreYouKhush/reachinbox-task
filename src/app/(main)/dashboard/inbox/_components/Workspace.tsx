@@ -81,7 +81,7 @@ export const Workspace = () => {
           {toggleDelete && (
             <DeleteModal
               setToggleDelete={setToggleDelete}
-              threadId={findData?.threadId}
+              threadId={String(findData?.threadId)}
             />
           )}
         </div>

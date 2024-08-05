@@ -135,7 +135,7 @@ export const EmailArea = ({ email, threadId, setToggleDelete }: EmailProp) => {
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuLabel
-                  onClick={() => setToggleDelete(true)}
+                  onClick={() => setToggleDelete?.(true)}
                   className="flex items-center gap-2 cursor-pointer"
                 >
                   <Trash size={20} /> Delete

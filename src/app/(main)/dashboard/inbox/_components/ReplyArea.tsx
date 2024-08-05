@@ -17,8 +17,8 @@ import axios from "axios";
 import { useCookies } from "next-client-cookies";
 
 interface ReplyAreaProps {
-  email: IEmail;
-  setToggleReply: Function;
+  email?: IEmail;
+  setToggleReply?: Function;
 }
 
 const ReplyArea = ({ email, setToggleReply }: ReplyAreaProps) => {
@@ -29,18 +29,18 @@ const ReplyArea = ({ email, setToggleReply }: ReplyAreaProps) => {
 
   const handleReply = async () => {
     const mail = {
-      toName: email.toName,
-      to: email.toEmail,
-      from: email.fromEmail,
-      fromName: email.fromName,
+      toName: email?.toName,
+      to: email?.toEmail,
+      from: email?.fromEmail,
+      fromName: email?.fromName,
       subject: subject,
       body: desc,
-      references: [email.references],
+      references: [email?.references],
       isReplyTo: null,
     };
     console.log(JSON.stringify(mail));
     const response = await axios.post(
-      `https://hiring.reachinbox.xyz/api/v1/onebox/reply/${email.threadId}`,
+      `https://hiring.reachinbox.xyz/api/v1/onebox/reply/${email?.threadId}`,
       mail,
       {
         headers: {
@@ -62,16 +62,16 @@ const ReplyArea = ({ email, setToggleReply }: ReplyAreaProps) => {
         <X
           size={20}
           className="cursor-pointer"
-          onClick={() => setToggleReply(false)}
+          onClick={() => setToggleReply?.(false)}
         />
       </div>
       <div className="pl-7 py-2 border-b-[1px] dark:border-zinc-600 border-zinc-300 flex gap-2">
         <span className="text-zinc-600">To:</span>
-        {email.toEmail}
+        {email?.toEmail}
       </div>
       <div className="pl-7 py-2 border-b-[1px] dark:border-zinc-600 border-zinc-300 flex gap-2">
         <span className="text-zinc-600">From:</span>
-        {email.fromEmail}
+        {email?.fromEmail}
       </div>
       <div className="pl-7 py-2 border-b-[1px] dark:border-zinc-600 border-zinc-300 flex gap-2">
         <span className="text-zinc-600">Subject:</span>
@@ -110,14 +110,26 @@ const ReplyArea = ({ email, setToggleReply }: ReplyAreaProps) => {
           <Eye size={20} />
           Preview Email
         </div>
-        <LetterText className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1" size={30} />
-        <Paperclip className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1" size={30} />
-        <Image className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1" size={30} />
+        <LetterText
+          className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1"
+          size={30}
+        />
+        <Paperclip
+          className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1"
+          size={30}
+        />
+        <Image
+          className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1"
+          size={30}
+        />
         <UserRoundMinus
           className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1"
           size={30}
         />
-        <Code className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1" size={30} />
+        <Code
+          className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1"
+          size={30}
+        />
       </div>
     </div>
   );

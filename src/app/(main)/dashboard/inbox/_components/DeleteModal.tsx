@@ -8,7 +8,7 @@ import { fetchEmails } from "@/redux/features/data-slice";
 
 interface DeleteProps {
   setToggleDelete: Function;
-  threadId: string;
+  threadId?: string;
 }
 
 const DeleteModal = ({ setToggleDelete, threadId }: DeleteProps) => {
