@@ -89,7 +89,7 @@ export const EmailArea = ({ email, threadId, setToggleDelete }: EmailProp) => {
             <div className="font-light text-zinc-500">{email?.fromEmail}</div>
           </div>
           <div className="flex justify-center items-center gap-4">
-            <Button className="flex gap-2 dark:bg-zinc-800 dark:border-zinc-600 border-[1px] border-zinc-300 bg-zinc-100">
+            <Button className="flex gap-2 dark:bg-zinc-800 dark:border-zinc-600 border-[1px] border-zinc-300 bg-zinc-100 hover:bg-muted">
               <Dot variant="interested" size="large" />
               <div className="dark:text-white text-black">Interested</div>
               {theme == "dark" ? (
@@ -98,12 +98,12 @@ export const EmailArea = ({ email, threadId, setToggleDelete }: EmailProp) => {
                 <ChevronDown color="black" />
               )}
             </Button>
-            <Button className="dark:bg-zinc-800 dark:border-zinc-600 border-[1px] dark:text-white text-black border-zinc-300 bg-zinc-100">
+            <Button className="dark:bg-zinc-800 dark:border-zinc-600 border-[1px] dark:text-white text-black border-zinc-300 bg-zinc-100 hover:bg-muted">
               Move
             </Button>
             <DropdownMenu>
               <DropdownMenuTrigger>
-                <Button className="dark:bg-zinc-800 dark:border-zinc-600 border-[1px] border-zinc-300 bg-zinc-100 p-3">
+                <Button className="dark:bg-zinc-800 dark:border-zinc-600 border-[1px] border-zinc-300 bg-zinc-100 p-3 hover:bg-muted">
                   {theme == "dark" ? (
                     <Ellipsis size={20} color="white" />
                   ) : (
@@ -148,7 +148,7 @@ export const EmailArea = ({ email, threadId, setToggleDelete }: EmailProp) => {
           <div>
             <div className="relative">
               <Separator className="border-[0.1px] m-5" />
-              <div className="absolute -top-[8px] left-1/2 -translate-x-1/2 text-[11px] bg-zinc-800 py-[1px] px-2 rounded-sm text-zinc-300">
+              <div className="absolute -top-[8px] left-1/2 -translate-x-1/2 text-[11px] dark:bg-zinc-800 py-[1px] px-2 rounded-sm  dark:text-zinc-300 bg-gray-300 text-black">
                 {formatedDate}
               </div>
             </div>
@@ -157,7 +157,7 @@ export const EmailArea = ({ email, threadId, setToggleDelete }: EmailProp) => {
               <div className="relative cursor-pointer">
                 <Separator className="border-[0.1px] m-5" />
                 <div
-                  className="absolute -top-[8px] left-1/2 -translate-x-1/2 text-[11px] bg-zinc-800 py-[1px] px-2 rounded-sm text-zinc-300 flex gap-1 items-center hover:bg-zinc-900 duration-75 transition-all"
+                  className="absolute -top-[8px] left-1/2 -translate-x-1/2 text-[11px] dark:bg-zinc-800 py-[1px] px-2 rounded-sm dark:text-zinc-300 flex gap-1 items-center dark:hover:bg-zinc-900 duration-75 transition-all bg-gray-300 hover:bg-gray-400"
                   onClick={() => {
                     setToggleReplies(true);
                   }}

@@ -56,8 +56,8 @@ const ReplyArea = ({ email, setToggleReply }: ReplyAreaProps) => {
   }, [subject]);
 
   return (
-    <div className="bg-zinc-800 rounded-lg border-[1px] border-zinc-600 text-[12px] shadow-md shadow-white/10">
-      <div className="flex justify-between bg-zinc-700 pl-7 pr-2 py-2 items-center border-b-[1px] border-zinc-600 rounded-lg">
+    <div className="dark:bg-zinc-800 bg-zinc-200 rounded-lg border-[1px] dark:border-zinc-600 border-zinc-300 text-[12px] shadow-md shadow-white/10">
+      <div className="flex justify-between dark:bg-zinc-700 bg-zinc-300 pl-7 pr-2 py-2 items-center border-b-[1px] dark:border-zinc-600 border-zinc-300 rounded-lg">
         <div>Reply</div>
         <X
           size={20}
@@ -65,15 +65,15 @@ const ReplyArea = ({ email, setToggleReply }: ReplyAreaProps) => {
           onClick={() => setToggleReply(false)}
         />
       </div>
-      <div className="pl-7 py-2 border-b-[1px] border-zinc-600 flex gap-2">
+      <div className="pl-7 py-2 border-b-[1px] dark:border-zinc-600 border-zinc-300 flex gap-2">
         <span className="text-zinc-600">To:</span>
         {email.toEmail}
       </div>
-      <div className="pl-7 py-2 border-b-[1px] border-zinc-600 flex gap-2">
+      <div className="pl-7 py-2 border-b-[1px] dark:border-zinc-600 border-zinc-300 flex gap-2">
         <span className="text-zinc-600">From:</span>
         {email.fromEmail}
       </div>
-      <div className="pl-7 py-2 border-b-[1px] border-zinc-600 flex gap-2">
+      <div className="pl-7 py-2 border-b-[1px] dark:border-zinc-600 border-zinc-300 flex gap-2">
         <span className="text-zinc-600">Subject:</span>
         <input
           placeholder="Subject"
@@ -102,22 +102,22 @@ const ReplyArea = ({ email, setToggleReply }: ReplyAreaProps) => {
             <ChevronDown size={15} fill="white" />
           </Button>
         </div>
-        <div className="flex gap-2 items-center text-[15px] hover:bg-zinc-900 rounded-md px-2 py-1">
+        <div className="flex gap-2 items-center text-[15px] hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md px-2 py-1">
           <Zap fill="white" size={20} />
           Variables
         </div>
-        <div className="flex gap-2 items-center text-[15px] hover:bg-zinc-900 rounded-md px-2 py-1">
+        <div className="flex gap-2 items-center text-[15px] hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md px-2 py-1">
           <Eye size={20} />
           Preview Email
         </div>
-        <LetterText className="hover:bg-zinc-900 rounded-md p-1" size={30} />
-        <Paperclip className="hover:bg-zinc-900 rounded-md p-1" size={30} />
-        <Image className="hover:bg-zinc-900 rounded-md p-1" size={30} />
+        <LetterText className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1" size={30} />
+        <Paperclip className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1" size={30} />
+        <Image className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1" size={30} />
         <UserRoundMinus
-          className="hover:bg-zinc-900 rounded-md p-1"
+          className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1"
           size={30}
         />
-        <Code className="hover:bg-zinc-900 rounded-md p-1" size={30} />
+        <Code className="hover:bg-zinc-300 dark:hover:bg-zinc-900 rounded-md p-1" size={30} />
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { HeroSvgComponent } from "@/components/hero-image";
 export const Hero = () => {
   return (
     <>
-      <div className="flex justify-center items-center h-dvh flex-col gap-8">
+      <div className="flex justify-center items-center h-dvh flex-col gap-8 bg-gray-200">
         <HeroSvgComponent />
         <p className="text-3xl">
           It’s the beginning of a legendary sales pipeline

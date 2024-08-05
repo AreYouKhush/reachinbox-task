@@ -7,13 +7,30 @@ import { Separator } from "@radix-ui/react-separator";
 import { EmailSidebar } from "./EmailSidebar";
 import React from "react";
 import Link from "next/link";
-import { useAppSelector } from "@/redux/store";
+import { AppDispatch, useAppSelector } from "@/redux/store";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { fetchEmails } from "@/redux/features/data-slice";
+import { useCookies } from "next-client-cookies";
 
 export const MessageList = () => {
   const { theme } = useTheme();
+  const dispatch = useDispatch<AppDispatch>();
+  const cookies = useCookies();
+  const token = cookies.get("token");
   let data = useAppSelector((state) => state.email.emails);
-
+  const handleReset = async () => {
+    const response = await axios.get(
+      "https://hiring.reachinbox.xyz/api/v1/onebox/reset",
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    dispatch(fetchEmails());
+  };
   return (
     <>
       <div className="flex flex-col gap-5">
@@ -23,7 +40,12 @@ export const MessageList = () => {
               <div>All Inbox(s)</div>
               <ChevronDown />
             </div>
-            <Button className="dark:bg-zinc-700 bg-gray-100 border-gray-400 border p-0 w-[30px] h-[30px] dark:border-none">
+            <Button
+              onClick={() => {
+                handleReset();
+              }}
+              className="dark:bg-zinc-700 bg-gray-100 border-gray-400 border p-0 w-[30px] h-[30px] dark:border-none hover:bg-zinc-300"
+            >
               {theme == "light" ? (
                 <RotateCw className="w-[13px]" color="black" />
               ) : (
@@ -43,7 +65,7 @@ export const MessageList = () => {
         </div>
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <Badge className="dark:bg-zinc-700 text-blue-400 text-[15px]">
+            <Badge className="dark:bg-zinc-700 text-blue-400 text-[15px] bg-gray-200">
               26
             </Badge>
             <div className="text-[15px]">New Replies</div>
@@ -57,7 +79,7 @@ export const MessageList = () => {
           {data?.map((d, id) => {
             return (
               <React.Fragment key={id}>
-                <Separator className="border-[1px] border-zinc-800" />
+                <Separator className="border-[1px] dark:border-zinc-800 border-zinc-300" />
                 <Link href={`/dashboard/inbox/${d?.id}`}>
                   <EmailSidebar data={d} />
                 </Link>

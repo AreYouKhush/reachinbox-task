@@ -36,12 +36,12 @@ export const Email = ({ email, reply }: EmailProp) => {
       {reply && (
         <div className="relative flex justify-center">
           <Separator className="border-[0.1px] w-[95%]" />
-          <div className="absolute -top-[8px] left-1/2 -translate-x-1/2 text-[11px] bg-zinc-800 py-[1px] px-2 rounded-sm text-zinc-300">
+          <div className="absolute -top-[8px] left-1/2 -translate-x-1/2 text-[11px] dark:bg-zinc-800 py-[1px] px-2 rounded-sm dark:text-zinc-300 bg-gray-300 text-black">
             {formatedDate}
           </div>
         </div>
       )}
-      <div className="m-6 bg-zinc-800 rounded-md border-[1px] border-zinc-600 text-[12px] p-4 flex flex-col gap-2">
+      <div className="m-6 dark:bg-zinc-800 rounded-md border-[1px] dark:border-zinc-600 text-[12px] p-4 flex flex-col gap-2 bg-gray-100 border-zinc-300">
         <div className="flex justify-between">
           <div>{email?.subject}</div>
           <div className="text-zinc-500">{wholeDate}</div>

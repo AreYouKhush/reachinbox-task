@@ -47,7 +47,7 @@ export const Workspace = () => {
   return (
     <>
       <div className="pt-[56px] pl-[56px] flex h-dvh">
-        <div className="dark:bg-black w-[500px] border-r-[1px] border-gray-300 dark:border-zinc-800 p-5">
+        <div className="dark:bg-black w-[500px] border-r-[1px]  dark:border-zinc-800 p-5">
           <MessageList />
         </div>
         <div className="dark:bg-black w-dvw relative">

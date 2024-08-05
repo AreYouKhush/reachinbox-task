@@ -34,11 +34,13 @@ export const EmailSidebar = ({ data }: IData) => {
           </div>
         </div>
         <div className="flex gap-2 h-[20px] px-2">
-          <Badge className="flex items-center  justify-center gap-1 dark:text-white text-black dark:bg-zinc-600 font-light">
-            <Dot variant="interested" />
-            <div className="text-interested text-[10px]">Interested</div>
+          <Badge className="flex items-center  justify-center gap-1 dark:text-white text-black dark:bg-zinc-600 font-light bg-gray-200">
+            <Dot variant="closed" />
+            <div className="text-black dark:text-white text-[10px]">
+              Interested
+            </div>
           </Badge>
-          <Badge className="flex items-center gap-1 dark:bg-zinc-600 dark:text-white text-black font-light">
+          <Badge className="flex items-center gap-1 dark:bg-zinc-600 dark:text-white text-black font-light bg-gray-200">
             <Send size={13} />
             <div className="text-[10px]">Campaign Name</div>
           </Badge>
