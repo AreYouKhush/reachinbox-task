@@ -46,7 +46,7 @@ Project deployed on:
 ### /dashboard/inbox/:thread_id
 ![Screenshot 2024-08-05 163143](https://github.com/user-attachments/assets/b613a33a-52f5-4834-a124-62d3948cad0c)
 
-### Ligh Mode
+### Light Mode
 ![Screenshot 2024-08-05 163629](https://github.com/user-attachments/assets/f0edf14f-6f3c-4d32-8b45-09eb916d3ec4)
 
 ### Reply box ('r' key)
